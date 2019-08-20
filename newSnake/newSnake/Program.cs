@@ -10,6 +10,7 @@ namespace newSnake
     {
         static void Main(string[] args)
         {
+            Console.SetBufferSize( 80, 25 );
 
             HorizontalLine topLine = new HorizontalLine(0, 78, 0, '+');
             HorizontalLine bottomLine = new HorizontalLine(0, 78, 24, '+');
@@ -19,6 +20,10 @@ namespace newSnake
             bottomLine.Drow();
             leftLine.Drow();
             rightLine.Drow();
+
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 3, Direction.RIGHT);
+            snake.Drow();
 
             Console.ReadLine();
 
