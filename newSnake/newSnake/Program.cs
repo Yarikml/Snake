@@ -22,11 +22,8 @@ namespace newSnake
             Point p4 = new Point(3, 2, '*');
             p4.Draw();
 
-            List<Point> snake = new List<Point>();
-            snake.Add(p1);
-            snake.Add(p2);
-            snake.Add(p3);
-            snake.Add(p4);
+            HorizontalLine hLine = new HorizontalLine(5, 10, 8, '+');
+            hLine.Drow();
             
             
 
