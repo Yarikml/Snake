@@ -13,8 +13,21 @@ namespace newSnake
             Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
-            Point p2 = new Point(4, 5, '#');
+            Point p2 = new Point(4, 5, '*');
             p2.Draw();
+
+            Point p3 = new Point(2, 4, '*');
+            p3.Draw();
+
+            Point p4 = new Point(3, 2, '*');
+            p4.Draw();
+
+            List<Point> snake = new List<Point>();
+            snake.Add(p1);
+            snake.Add(p2);
+            snake.Add(p3);
+            snake.Add(p4);
+            
             
 
             Console.ReadLine();
