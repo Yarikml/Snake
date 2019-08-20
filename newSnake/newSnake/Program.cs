@@ -24,6 +24,9 @@ namespace newSnake
 
             HorizontalLine hLine = new HorizontalLine(5, 10, 8, '+');
             hLine.Drow();
+
+            VerticalLine vLine = new VerticalLine(2, 7, 4, '^');
+            vLine.DrowVertical();
             
             
 
