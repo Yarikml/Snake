@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace newSnake
 {
@@ -22,9 +23,24 @@ namespace newSnake
             rightLine.Drow();
 
             Point p = new Point(4, 5, '*');
-            Snake snake = new Snake(p, 3, Direction.RIGHT);
+            Snake snake = new Snake(p, 10, Direction.RIGHT);
             snake.Drow();
 
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
+            
+            while(true)
+            {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
+            }
+            
             Console.ReadLine();
 
         }
